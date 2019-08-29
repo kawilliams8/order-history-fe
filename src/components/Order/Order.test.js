@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import Order from '../Order/Order';
 
 describe('Order', () => {
-
+3
   let mockOrder;
   beforeEach(() => {
     mockOrder = {

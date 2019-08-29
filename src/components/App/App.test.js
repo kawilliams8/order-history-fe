@@ -17,6 +17,21 @@ describe('App', () => {
   });
 
   it('should update state when addOrder is called', async () => {
+    const mockResponse = [{
+      id: 1,
+      img: "image.png",
+      name: "Mock Order",
+      description: "This is a mock description",
+      price: 3
+    }]
+
+    window.fetch = jest.fn().mockImplementation(() => {
+      return Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(mockResponse)
+      })
+    })
+
     const wrapper = await shallow(<App />);
     const mockOrder = {
       id: 1,
@@ -26,7 +41,8 @@ describe('App', () => {
       price: 3
       }
 
-    const expected = [mockOrder];
+    const expected = [mockResponse];
+
     expect(wrapper.state('orders')).toEqual([]);
     await(wrapper.instance().addOrder(mockOrder))
     expect(wrapper.state('orders')).toEqual(expected)
