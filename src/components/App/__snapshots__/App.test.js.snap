@@ -23,6 +23,7 @@ exports[`App should match the snapshot 1`] = `
   >
     <Orders
       data={Array []}
+      removeOrder={[Function]}
     />
   </div>
 </div>

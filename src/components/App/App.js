@@ -30,12 +30,23 @@ class App extends Component {
 
     fetch('http://localhost:3001/api/v1/purchases', options)
     .then(response => response.json())
-    .then(orders => console.log('posted orders', orders))
-    // .catch()
+    .then(data => this.setState({orders: data}))
+    .catch(error => this.setState({ error: error.message }))
   }
 
   removeOrder = (id) => {
-    console.log(id);
+    const options = {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+    
+    fetch(`http://localhost:3001/api/v1/purchases/${id}`, options)
+    .then(() => fetch('http://localhost:3001/api/v1/purchases'))
+    .then(response => response.json())
+    .then(data => this.setState({orders: data}))
+    .catch(error => this.setState({ error: error.message }))
   }
 
   render() {
@@ -48,7 +59,7 @@ class App extends Component {
           </div>
         </header>
         <div className='purchase-container'>
-          <Orders data={this.state.orders}/>
+          <Orders data={this.state.orders} removeOrder={this.removeOrder}/>
         </div>
       </div>
     );
