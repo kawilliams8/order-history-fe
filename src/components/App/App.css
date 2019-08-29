@@ -4,7 +4,7 @@
 
 header {
   align-items: center;
-  background: url('../images/checkout.jpg') no-repeat center / 100%;
+  background: url('../../images/checkout.jpg') no-repeat center / 100%;
   color: #FFF;
   display: flex;
   flex-direction: row-reverse;
