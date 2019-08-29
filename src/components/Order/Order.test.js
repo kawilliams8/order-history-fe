@@ -16,5 +16,4 @@ describe('Order', () => {
     expect(wrapper).toMatchSnapshot()
   });
 
-  it('should ')
 })

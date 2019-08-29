@@ -1,3 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Order should match the snapshot 1`] = `ShallowWrapper {}`;
+exports[`Order should match the snapshot 1`] = `
+<article
+  className="Order"
+>
+  <img
+    alt="This is a mock description"
+    className="productImage"
+    src="image.png"
+  />
+  <h3
+    className="productName"
+  >
+    Mock Order
+  </h3>
+  <h3
+    className="productDescription"
+  >
+    This is a mock description
+  </h3>
+  <h3
+    className="productPrice"
+  >
+    $
+    3
+  </h3>
+  <button />
+</article>
+`;
