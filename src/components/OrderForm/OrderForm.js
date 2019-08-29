@@ -34,10 +34,10 @@ class OrderForm extends Component {
   render() {
     return (
       <form className="OrderForm">
-        <input type="text" name="name" placeholder="Item Name" value={this.state.name} onChange={this.handleTyping}></input>
-        <input type="text" name="description" placeholder="Item Description" value={this.state.description} onChange={this.handleTyping}></input>
-        <input type="number" name="price" placeholder="Item Price" value={this.state.price} onChange={this.handleTyping}></input>
-        <button onClick={this.handleFormSubmit}></button>
+        <input className="nameInput" type="text" name="name" placeholder="Item Name" value={this.state.name} onChange={this.handleTyping}></input>
+        <input className="descriptionInput" type="text" name="description" placeholder="Item Description" value={this.state.description} onChange={this.handleTyping}></input>
+        <input className="priceInput" type="number" name="price" placeholder="Item Price" value={this.state.price} onChange={this.handleTyping}></input>
+        <button className="submitButton" onClick={this.handleFormSubmit}>Add Purchase</button>
       </form>
     )
   }

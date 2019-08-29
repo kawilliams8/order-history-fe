@@ -1,3 +1,17 @@
 .OrderForm {
-  color: red;
+  width: 350px;
+}
+
+.nameInput,
+.descriptionInput,
+.priceInput,
+.submitButton {
+  height: 25px;
+  margin: 10px;
+  width: 300px;
+}
+
+.submitButton {
+  background-color: #5fdb6f;
+  color: white;
 }

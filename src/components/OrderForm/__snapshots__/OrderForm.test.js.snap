@@ -5,6 +5,7 @@ exports[`Order Form should match the snapshot 1`] = `
   className="OrderForm"
 >
   <input
+    className="nameInput"
     name="name"
     onChange={[Function]}
     placeholder="Item Name"
@@ -12,6 +13,7 @@ exports[`Order Form should match the snapshot 1`] = `
     value=""
   />
   <input
+    className="descriptionInput"
     name="description"
     onChange={[Function]}
     placeholder="Item Description"
@@ -19,6 +21,7 @@ exports[`Order Form should match the snapshot 1`] = `
     value=""
   />
   <input
+    className="priceInput"
     name="price"
     onChange={[Function]}
     placeholder="Item Price"
@@ -26,7 +29,10 @@ exports[`Order Form should match the snapshot 1`] = `
     value=""
   />
   <button
+    className="submitButton"
     onClick={[Function]}
-  />
+  >
+    Add Purchase
+  </button>
 </form>
 `;

@@ -14,6 +14,17 @@ describe("Order Form", () => {
   });
 
   it('should update Form\'s state when typing', () => {
-    const mockEvent = {target: {name: "name", value: "Item Nam"}}
+    const mockEvent = {target: {name: "name", value: "Item Name"}};
+    const expected = "Item Name";
+    wrapper.instance().handleTyping(mockEvent);
+    expect(wrapper.state('name')).toEqual(expected);
+  });
+
+  it('should call the addOrder method when you click', () => {
+    wrapper.instance().addOrder = jest.fn();
+    const mockEvent = {preventDefault: jest.fn()};
+    wrapper.instance().forceUpdate();
+    wrapper.find('button').simulate('click', mockEvent);
+    expect(wrapper.instance().addOrder).toHaveBeenCalled();
   })
 })
