@@ -25,7 +25,6 @@ class OrderForm extends Component {
     const newOrder = {
       ...this.state,
       id: Date.now(),
-      img: {notFound}
     }
     const { addOrder } = this.props;
     addOrder(newOrder);
@@ -40,6 +39,7 @@ class OrderForm extends Component {
   render() {
     return (
       <form className="OrderForm">
+        <input className="imageInput" type="text" name="img" placeholder="Item Image URL" value={this.state.img} onChange={this.handleTyping}></input>
         <input className="nameInput" type="text" name="name" placeholder="Item Name" value={this.state.name} onChange={this.handleTyping}></input>
         <input className="descriptionInput" type="text" name="description" placeholder="Item Description" value={this.state.description} onChange={this.handleTyping}></input>
         <input className="priceInput" type="number" name="price" placeholder="Item Price" value={this.state.price} onChange={this.handleTyping}></input>
