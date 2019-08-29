@@ -20,7 +20,6 @@ class App extends Component {
   }
 
   addOrder = (newOrder) => {
-    console.log(newOrder )
     const options = {
       method: "POST",
       body: JSON.stringify(newOrder),
@@ -33,6 +32,10 @@ class App extends Component {
     .then(response => response.json())
     .then(orders => console.log('posted orders', orders))
     // .catch()
+  }
+
+  removeOrder = (id) => {
+    console.log(id);
   }
 
   render() {
