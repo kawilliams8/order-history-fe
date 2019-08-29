@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Orders should match the snapshot 1`] = `
+<main
+  className="Orders"
+>
+  <Order
+    data={
+      Object {
+        "description": "This is a mock description",
+        "id": 1,
+        "img": "image.png",
+        "name": "Mock Order 1",
+        "price": 3,
+      }
+    }
+    key="0"
+  />
+  <Order
+    data={
+      Object {
+        "description": "This is a mock description",
+        "id": 2,
+        "img": "image.png",
+        "name": "Mock Order 2",
+        "price": 45,
+      }
+    }
+    key="1"
+  />
+</main>
+`;

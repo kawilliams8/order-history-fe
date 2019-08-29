@@ -9,7 +9,7 @@ const Order = ({ data }) => {
       <h3 className="productName" >{name}</h3>
       <h3 className="productDescription" >{description}</h3>
       <h3 className="productPrice" >${price}</h3>
-      <button></button>
+      <button ></button>
     </article>
   )
 }
