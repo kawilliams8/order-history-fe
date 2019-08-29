@@ -29,6 +29,12 @@ class OrderForm extends Component {
     }
     const { addOrder } = this.props;
     addOrder(newOrder);
+    this.setState({
+      img: "",
+      name: "",
+      description: "",
+      price: ""
+    })
   }
 
   render() {

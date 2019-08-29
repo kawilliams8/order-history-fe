@@ -30,7 +30,7 @@ class App extends Component {
 
     fetch('http://localhost:3001/api/v1/purchases', options)
     .then(response => response.json())
-    .then(data => this.setState({orders: data}))
+    .then(data => this.setState({orders: [...this.state.orders, data]}))
     .catch(error => this.setState({ error: error.message }))
   }
 
