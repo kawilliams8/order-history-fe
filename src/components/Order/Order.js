@@ -9,7 +9,7 @@ const Order = ({ data, removeOrder }) => {
       <h3 className="productName" >{name}</h3>
       <h3 className="productDescription" >{description}</h3>
       <h3 className="productPrice" >${price}</h3>
-      <button onClick={() => removeOrder(id)}></button>
+      <button className="deleteButton" onClick={() => removeOrder(id)}>Remove From History</button>
     </article>
   )
 }
