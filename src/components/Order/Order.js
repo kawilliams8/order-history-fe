@@ -5,11 +5,11 @@ const Order = ({ data }) => {
   const { id, img, name, description, price } = data;
   return (
     <article className="Order">
-      <h3>{id}</h3>
-      <h3>{img}</h3>
-      <h3>{name}</h3>
-      <h3>{description}</h3>
-      <h3>{price}</h3>
+      <img className="productImage" src={img} alt={description}/>
+      <h3 className="productName" >{name}</h3>
+      <h3 className="productDescription" >{description}</h3>
+      <h3 className="productPrice" >${price}</h3>
+      <button></button>
     </article>
   )
 }

@@ -3,8 +3,8 @@ import './Orders.css';
 import Order from '../Order/Order';
 
 const Orders = ({ data }) => {
-  const orderCards = data.map(order => {
-    return <Order data={order}/>
+  const orderCards = data.map((order, index) => {
+    return <Order data={order} key={index}/>
   })
 
   return (

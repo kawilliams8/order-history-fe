@@ -2,4 +2,22 @@
   background-color: white;
   box-shadow: 10px 10px 5px grey;
   margin: 40px;
+  display: flex;
+}
+
+.productImage {
+  height: 100px;
+}
+
+.productName {
+  display: block;
+  font-size: 21px;
+}
+
+.productDescription {
+  font-size: 12px;
+}
+
+.productPrice {
+  font-size: 21px;
 }
