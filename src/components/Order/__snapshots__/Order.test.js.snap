@@ -26,7 +26,10 @@ exports[`Order should match the snapshot 1`] = `
     3
   </h3>
   <button
+    className="deleteButton"
     onClick={[Function]}
-  />
+  >
+    Remove From History
+  </button>
 </article>
 `;

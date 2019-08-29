@@ -5,6 +5,14 @@ exports[`Order Form should match the snapshot 1`] = `
   className="OrderForm"
 >
   <input
+    className="imageInput"
+    name="img"
+    onChange={[Function]}
+    placeholder="Item Image URL"
+    type="text"
+    value=""
+  />
+  <input
     className="nameInput"
     name="name"
     onChange={[Function]}

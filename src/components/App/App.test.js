@@ -16,6 +16,20 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot()
   });
 
-  it('should ')
+  it('should update state when addOrder is called', async () => {
+    const wrapper = await shallow(<App />);
+    const mockOrder = {
+      id: 1,
+      img: "image.png",
+      name: "Mock Order",
+      description: "This is a mock description",
+      price: 3
+      }
+
+    const expected = [mockOrder];
+    expect(wrapper.state('orders')).toEqual([]);
+    await(wrapper.instance().addOrder(mockOrder))
+    expect(wrapper.state('orders')).toEqual(expected)
+    })
   
 })
