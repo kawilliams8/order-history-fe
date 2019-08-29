@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App/App.css';
+import Orders from '../../components/Orders/Orders';
 
 class App extends Component {
   constructor() {
@@ -14,11 +15,10 @@ class App extends Component {
     fetch('http://localhost:3001/api/v1/purchases')
     .then(response => response.json())
     .then(data => this.setState({orders: data}))
-    .catch(error => this.setState({error.message}))
+    .catch(error => this.setState({error: error.message}))
   }
 
   render() {
-    console.log('render')
     return (
       <div className="App">
         <header>
@@ -28,7 +28,7 @@ class App extends Component {
           </div>
         </header>
         <div className='purchase-container'>
-
+          <Orders data={this.state.orders}/>
         </div>
       </div>
     );
